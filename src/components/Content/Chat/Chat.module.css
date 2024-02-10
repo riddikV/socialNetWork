@@ -1,0 +1,48 @@
+.dialogs {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+
+	padding: 5px;
+}
+
+.dialogs__chat {
+	flex: 4;
+	background-color: #17181c;
+	border-radius: 20px;
+}
+
+.dialogs__user {
+	flex: 1;
+	min-width: 360px;
+
+	display: flex;
+	flex-direction: column;
+	margin-right: 5px;
+}
+
+.chat__header {
+	flex: 1;
+	margin-bottom: 20px;
+} 
+.chat__chats {
+	flex: 5;
+}
+.chat__header_title {
+	padding: 2.3rem 1.25rem 1.25rem 1.25rem;
+
+	display: flex;
+}
+.chat__header_title {
+	font-size: 28px;
+	color: #fff;
+}
+
+.chat__header_i_w {
+	width: 100%;
+}
+
+.chat__header_input {
+	margin: 0 20px;
+}
