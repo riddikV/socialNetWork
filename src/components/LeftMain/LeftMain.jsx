@@ -1,5 +1,7 @@
 import cls from './LeftMain.module.css';
 
+import { NavLink } from "react-router-dom";
+
 const LeftMain = () => {
 	return (
 		<div className={`${cls.left__main} ${cls.left__main_style}`}>
@@ -8,50 +10,60 @@ const LeftMain = () => {
 			</div>
 
 			<div className={cls.main_navLinks}>
-				<a href="/" className={`${cls.main_navLink} ${cls.active}`}>
+				<NavLink to="/research" className={({ isActive, isPending }) =>
+					isPending ? cls.main_navLink : isActive ? `${cls.main_navLink} ${cls.active}` : cls.main_navLink
+				}>
 					<div className={`${cls.cr} ${cls.main_navLin_a}`}>
 						<i className="fa-solid fa-fire-flame-curved"></i>
 					</div>
 					<span className={cls.main_navLin_span}>
 						исследовать
 					</span>
-				</a>
-				<a href="/messang" className={cls.main_navLink}>
+				</NavLink>
+				<NavLink to="/messang" className={({ isActive, isPending }) =>
+					isPending ? cls.main_navLink : isActive ? `${cls.main_navLink} ${cls.active}` : cls.main_navLink
+				}>
 					<div className={`${cls.cr} ${cls.main_navLin_a}`}>
 						<i className="cr fa-regular fa-comments"></i>
 					</div>
 					<span className={cls.main_navLin_span}>
 						Чат
 					</span>
-				</a>
-				<a href="/workshop" className={cls.main_navLink}>
+				</NavLink>
+				<NavLink to="/workshop" className={({ isActive, isPending }) =>
+					isPending ? cls.main_navLink : isActive ? `${cls.main_navLink} ${cls.active}` : cls.main_navLink
+				}>
 					<div className={cls.main_navLin_a}>
 						<i className="cr fa-solid fa-toolbox"></i>
 					</div>
 					<span className={cls.main_navLin_span}>
 						Мастерская
 					</span>
-				</a>
-				<a href="/reward" className={cls.main_navLink}>
+				</NavLink>
+				<NavLink to="/reward" className={({ isActive, isPending }) =>
+					isPending ? cls.main_navLink : isActive ? `${cls.main_navLink} ${cls.active}` : cls.main_navLink
+				}>
 					<div className={cls.main_navLin_a}>
 						<i className="cr fa-regular fa-gem"></i>
 					</div>
 					<span className={cls.main_navLin_span}>
 						награда
 					</span>
-				</a>
-				<a href="/profile" className={cls.main_navLink}>
+				</NavLink>
+				<NavLink to="/profile" className={({ isActive, isPending }) =>
+					isPending ? cls.main_navLink : isActive ? `${cls.main_navLink} ${cls.active}` : cls.main_navLink
+				}>
 					<div className={cls.main_navLin_a}>
 						<i className="cr fa-regular fa-user"></i>
 					</div>
 					<span className={cls.main_navLin_span}>
 						Профиль
 					</span>
-				</a>
+				</NavLink>
 			</div>
 
 			<div className={cls.left__main_bottom}>
-				<a href="#" className={`${cls.cr} ${cls.main_discord} ${cls.size_i} ${cls.color_w_i}`}>
+				<a href="#c" className={`${cls.cr} ${cls.main_discord} ${cls.size_i} ${cls.color_w_i}`}>
 					<i className="fa-brands fa-discord"></i>
 				</a>
 				<div className={cls.left_line}>

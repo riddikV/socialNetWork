@@ -54,7 +54,7 @@
 	padding: 9px 0;
 	border-radius: 8px;
 	margin: 0 auto;
-	transition: all .4s ease-in-out;
+	transition: all .25s ease-in-out;
 }
 .main_navLin_a:hover{
 	background: var(--color-back);

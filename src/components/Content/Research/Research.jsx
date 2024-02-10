@@ -1,9 +1,9 @@
 import cls from './Research.module.css';
 
-const Research = () => {
+const Research = ({ name }) => {
 	return (
 		<>
-			<h1 className='hell'>Research</h1>
+			<h1 className='hell'>{name}</h1>
 		</>
 	)
 }
